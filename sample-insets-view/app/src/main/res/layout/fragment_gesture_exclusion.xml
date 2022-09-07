@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include
+        android:id="@+id/appBar"
+        layout="@layout/app_bar"/>
+
+    <include
+        android:id="@+id/bottomSheetInclude"
+        layout="@layout/modal_bottom_sheet_content"/>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
+

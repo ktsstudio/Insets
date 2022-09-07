@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/GIT/HUB/insets/sample-insets-view/app/src/main/res/drawable/favorite-48px.xml" value="0.3465" />
+        <entry key="..\:/GIT/HUB/insets/sample-insets-view/app/src/main/res/drawable/ic_pets.xml" value="0.3465" />
+        <entry key="..\:/GIT/HUB/insets/sample-insets-view/app/src/main/res/drawable/ic_rocket.xml" value="0.3465" />
+        <entry key="..\:/GIT/HUB/insets/sample-insets-view/app/src/main/res/drawable/ic_smile.xml" value="0.3465" />
+        <entry key="..\:/GIT/HUB/insets/sample-insets-view/app/src/main/res/drawable/ic_star.xml" value="0.3465" />
+        <entry key="..\:/GIT/HUB/insets/sample-insets-view/app/src/main/res/drawable/ic_visibility.xml" value="0.435" />
+        <entry key="..\:/GIT/HUB/insets/sample-insets-view/app/src/main/res/drawable/round_bottom_sheet.xml" value="0.22" />
+        <entry key="..\:/GIT/HUB/insets/sample-insets-view/app/src/main/res/drawable/round_edittext.xml" value="0.466" />
+        <entry key="..\:/GIT/HUB/insets/sample-insets-view/app/src/main/res/layout/activity_main.xml" value="0.3463541666666667" />
+        <entry key="..\:/GIT/HUB/insets/sample-insets-view/app/src/main/res/layout/app_bar.xml" value="0.1" />
+        <entry key="..\:/GIT/HUB/insets/sample-insets-view/app/src/main/res/layout/fragment_fullscreen_cutout.xml" value="0.39791666666666664" />
+        <entry key="..\:/GIT/HUB/insets/sample-insets-view/app/src/main/res/layout/fragment_fullscreen_stable.xml" value="0.55" />
+        <entry key="..\:/GIT/HUB/insets/sample-insets-view/app/src/main/res/layout/fragment_gesture_exclusion.xml" value="0.25" />
+        <entry key="..\:/GIT/HUB/insets/sample-insets-view/app/src/main/res/layout/fragment_gesture_mandatory.xml" value="0.3109375" />
+        <entry key="..\:/GIT/HUB/insets/sample-insets-view/app/src/main/res/layout/fragment_keyboard_list_sample.xml" value="0.33" />
+        <entry key="..\:/GIT/HUB/insets/sample-insets-view/app/src/main/res/layout/fragment_list_sample.xml" value="0.36041666666666666" />
+        <entry key="..\:/GIT/HUB/insets/sample-insets-view/app/src/main/res/layout/fragment_menu.xml" value="0.36041666666666666" />
+        <entry key="..\:/GIT/HUB/insets/sample-insets-view/app/src/main/res/layout/fragment_stable.xml" value="0.38697916666666665" />
+        <entry key="..\:/GIT/HUB/insets/sample-insets-view/app/src/main/res/layout/fragment_tappable.xml" value="0.39791666666666664" />
+        <entry key="..\:/GIT/HUB/insets/sample-insets-view/app/src/main/res/layout/insets_sample_list_item.xml" value="0.36041666666666666" />
+        <entry key="..\:/GIT/HUB/insets/sample-insets-view/app/src/main/res/layout/list_item_color.xml" value="0.33" />
+        <entry key="..\:/GIT/HUB/insets/sample-insets-view/app/src/main/res/layout/list_item_inset.xml" value="0.46822916666666664" />
+        <entry key="..\:/GIT/HUB/insets/sample-insets-view/app/src/main/res/layout/modal_bottom_sheet_content.xml" value="0.33" />
+        <entry key="..\:/GIT/HUB/insets/sample-insets-view/app/src/main/res/layout/sample_list_item_inset.xml" value="0.3841880341880342" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

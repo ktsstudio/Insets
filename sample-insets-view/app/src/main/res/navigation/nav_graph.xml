@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/menuFragment">
+
+    <fragment
+        android:id="@+id/listSampleFragment"
+        android:name="ru.ktsstudio.sample.insets.ui.basiclist.ListSampleFragment"
+        android:label="ListSampleFragment"
+        tools:layout="@layout/fragment_list_sample" />
+
+    <fragment
+        android:id="@+id/menuFragment"
+        android:name="ru.ktsstudio.sample.insets.ui.menu.MenuFragment"
+        android:label="MenuFragment"
+        tools:layout="@layout/fragment_menu">
+        <action
+            android:id="@+id/action_menuFragment_to_listSampleFragment"
+            app:destination="@id/listSampleFragment" />
+        <action
+            android:id="@+id/action_menuFragment_to_keyboardListSampleFragment"
+            app:destination="@id/keyboardListSampleFragment" />
+        <action
+            android:id="@+id/action_menuFragment_to_gestureExclusionFragment"
+            app:destination="@id/gestureExclusionFragment" />
+        <action
+            android:id="@+id/action_menuFragment_to_gestureMandatoryFragment"
+            app:destination="@id/gestureMandatoryFragment" />
+        <action
+            android:id="@+id/action_menuFragment_to_tappableFragment"
+            app:destination="@id/tappableFragment" />
+        <action
+            android:id="@+id/action_menuFragment_to_fullscreenCutoutFragment"
+            app:destination="@id/fullscreenCutoutFragment" />
+        <action
+            android:id="@+id/action_menuFragment_to_fullscreenStableFragment"
+            app:destination="@id/fullscreenStableFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/keyboardListSampleFragment"
+        android:name="ru.ktsstudio.sample.insets.ui.keyboard.KeyboardListSampleFragment"
+        android:label="KeyboardListSampleFragment"
+        tools:layout="@layout/fragment_keyboard_list_sample" />
+    <fragment
+        android:id="@+id/gestureExclusionFragment"
+        android:name="ru.ktsstudio.sample.insets.ui.gesture.exclusion.GestureExclusionFragment"
+        android:label="GestureExclusionFragment"
+        tools:layout="@layout/fragment_gesture_exclusion" />
+    <fragment
+        android:id="@+id/gestureMandatoryFragment"
+        android:name="ru.ktsstudio.sample.insets.ui.gesture.mandatory.GestureMandatoryFragment"
+        android:label="GestureMandatoryFragment"
+        tools:layout="@layout/fragment_gesture_mandatory" />
+    <fragment
+        android:id="@+id/tappableFragment"
+        android:name="ru.ktsstudio.sample.insets.ui.tappable.TappableFragment"
+        android:label="TappableFragment"
+        tools:layout="@layout/fragment_tappable" />
+    <fragment
+        android:id="@+id/fullscreenCutoutFragment"
+        android:name="ru.ktsstudio.sample.insets.ui.fullscreen.FullscreenCutoutFragment"
+        android:label="FullscreenCutoutFragment"
+        tools:layout="@layout/fragment_fullscreen_cutout" />
+    <fragment
+        android:id="@+id/fullscreenStableFragment"
+        android:name="ru.ktsstudio.sample.insets.ui.fullscreen.FullscreenStableFragment"
+        android:label="FullscreenStableFragment"
+        tools:layout="@layout/fragment_fullscreen_stable" />
+
+</navigation>

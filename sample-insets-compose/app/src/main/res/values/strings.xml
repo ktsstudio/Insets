@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">insets-examples</string>
+    <string name="compose_samples">Compose samples</string>
+    <string name="insets_sample_list">Insets list sample</string>
+    <string name="insets_sample_tappable">Insets tappable</string>
+    <string name="insets_sample_keyboard_basic">Insets keyboard basic sample</string>
+    <string name="insets_sample_keyboard_scroll">Insets keyboard scroll sample</string>
+    <string name="insets_sample_fullscreen_cutout">Insets fullscreen cutout sample</string>
+    <string name="insets_sample_fullscreen_stable">Insets fullscreen stable sample</string>
+    <string name="insets_sample_gesture_mandatory">Insets gesture mandatory sample</string>
+    <string name="insets_sample_gesture_exclusion">Insets gesture exclusion sample</string>
+</resources>
