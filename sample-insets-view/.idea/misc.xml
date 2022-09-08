@@ -27,6 +27,17 @@
         <entry key="..\:/GIT/HUB/insets/sample-insets-view/app/src/main/res/layout/list_item_inset.xml" value="0.46822916666666664" />
         <entry key="..\:/GIT/HUB/insets/sample-insets-view/app/src/main/res/layout/modal_bottom_sheet_content.xml" value="0.33" />
         <entry key="..\:/GIT/HUB/insets/sample-insets-view/app/src/main/res/layout/sample_list_item_inset.xml" value="0.3841880341880342" />
+        <entry key="..\:/GIT/Insets/sample-insets-view/app/src/main/res/drawable/ic_arrow_back.xml" value="0.289" />
+        <entry key="..\:/GIT/Insets/sample-insets-view/app/src/main/res/drawable/ic_favorite.xml" value="0.289" />
+        <entry key="..\:/GIT/Insets/sample-insets-view/app/src/main/res/drawable/ic_pets.xml" value="0.289" />
+        <entry key="..\:/GIT/Insets/sample-insets-view/app/src/main/res/drawable/ic_rocket.xml" value="0.289" />
+        <entry key="..\:/GIT/Insets/sample-insets-view/app/src/main/res/drawable/ic_smile.xml" value="0.289" />
+        <entry key="..\:/GIT/Insets/sample-insets-view/app/src/main/res/drawable/ic_star.xml" value="0.289" />
+        <entry key="..\:/GIT/Insets/sample-insets-view/app/src/main/res/drawable/ic_visibility_off.xml" value="0.289" />
+        <entry key="..\:/GIT/Insets/sample-insets-view/app/src/main/res/layout/app_bar.xml" value="0.3109375" />
+        <entry key="..\:/GIT/Insets/sample-insets-view/app/src/main/res/layout/fragment_fullscreen_cutout.xml" value="0.3109375" />
+        <entry key="..\:/GIT/Insets/sample-insets-view/app/src/main/res/layout/fragment_tappable.xml" value="0.33" />
+        <entry key="..\:/GIT/Insets/sample-insets-view/app/src/main/res/layout/insets_sample_list_item.xml" value="0.3109375" />
       </map>
     </option>
   </component>

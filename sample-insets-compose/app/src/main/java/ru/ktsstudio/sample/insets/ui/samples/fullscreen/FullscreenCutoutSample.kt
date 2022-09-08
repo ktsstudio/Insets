@@ -20,14 +20,14 @@ fun FullscreenCutoutSample(
     Scaffold(
         topBar = {
             Spacer(
-                Modifier
+                modifier = Modifier
                     .statusBarsPadding()
                     .fillMaxWidth()
             )
         },
         bottomBar = {
             Spacer(
-                Modifier
+                modifier = Modifier
                     .navigationBarsPadding()
                     .fillMaxWidth()
             )
@@ -36,7 +36,7 @@ fun FullscreenCutoutSample(
         val interactionSource = remember { MutableInteractionSource() }
 
         Column(
-            Modifier.padding(contentPadding)
+            modifier = Modifier.padding(contentPadding)
         ) {
             FullscreenImage(
                 interactionSource = interactionSource,

@@ -18,10 +18,10 @@ import androidx.compose.ui.unit.dp
 fun BottomEditText(
     placeholderText: String = "Type text here..."
 ) {
+    val text = rememberSaveable(stateSaver = TextFieldValue.Saver) {
+        mutableStateOf(TextFieldValue(""))
+    }
     Surface(elevation = 1.dp) {
-        val text = rememberSaveable(stateSaver = TextFieldValue.Saver) {
-            mutableStateOf(TextFieldValue(""))
-        }
         OutlinedTextField(
             value = text.value,
             onValueChange = { text.value = it },

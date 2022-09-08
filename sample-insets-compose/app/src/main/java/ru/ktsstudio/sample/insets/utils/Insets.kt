@@ -61,4 +61,5 @@ private fun WindowInsets.deepCopy(density: Density, layoutDirection: LayoutDirec
 
 val navigationBarsInset: PaddingValues
     @Composable get() = WindowInsets.navigationBars
+        .only(WindowInsetsSides.Horizontal + WindowInsetsSides.Bottom)
         .asPaddingValues()

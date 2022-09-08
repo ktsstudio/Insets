@@ -7,16 +7,15 @@ import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import by.kirich1409.viewbindingdelegate.viewBinding
-import com.google.android.material.divider.MaterialDividerItemDecoration
+import com.hannesdorfmann.adapterdelegates4.ListDelegationAdapter
 import ru.ktsstudio.sample.insets.R
 import ru.ktsstudio.sample.insets.common.adapter.listAdapter
+import ru.ktsstudio.sample.insets.common.data.ListItem
 import ru.ktsstudio.sample.insets.databinding.FragmentListSampleBinding
 import ru.ktsstudio.sample.insets.utils.applySystemBarsInsetter
 import ru.ktsstudio.sample.insets.utils.generateRandomListItems
 import ru.ktsstudio.sample.insets.utils.getDrawable
-import ru.ktsstudio.sample.insets.utils.setDataWithInset
 import ru.ktsstudio.sample.insets.utils.setupAppBarInsets
-import ru.ktsstudio.sample.insets.utils.toast
 
 class ListSampleFragment : Fragment(R.layout.fragment_list_sample) {
 
@@ -48,12 +47,15 @@ class ListSampleFragment : Fragment(R.layout.fragment_list_sample) {
         val listAdapter = listAdapter()
         val divider = DividerItemDecoration(requireContext(), LinearLayoutManager.VERTICAL)
         listAdapter.setDataWithInset(generateRandomListItems())
-
         with(binding.list) {
             layoutManager = LinearLayoutManager(requireContext())
             adapter = listAdapter
             addItemDecoration(divider)
             setHasFixedSize(true)
         }
+    }
+
+    private fun ListDelegationAdapter<List<Any>>.setDataWithInset(data: List<Any>) {
+        items = data + listOf(ListItem.ListItemInset)
     }
 }

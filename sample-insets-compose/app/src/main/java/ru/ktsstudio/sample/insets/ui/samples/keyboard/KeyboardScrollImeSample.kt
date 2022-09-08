@@ -29,12 +29,6 @@ fun KeyboardScrollImeSample(
     listItems: List<ListItem> = generateRandomListItems()
 ) {
     Scaffold(
-        modifier = Modifier
-            .windowInsetsPadding(
-                WindowInsets.navigationBars
-                    .only(WindowInsetsSides.Horizontal)
-                    .union(WindowInsets.tappableElement)
-            ),
         topBar = {
             SampleTopBar(
                 titleRes = R.string.insets_sample_keyboard_scroll
@@ -49,6 +43,7 @@ fun KeyboardScrollImeSample(
                 contentPadding = contentPadding,
                 reverseLayout = true,
                 modifier = Modifier
+                    .windowInsetsPadding(WindowInsets.navigationBars.only(WindowInsetsSides.Horizontal))
                     .weight(1f)
                     .imeNestedScroll()
             ) {

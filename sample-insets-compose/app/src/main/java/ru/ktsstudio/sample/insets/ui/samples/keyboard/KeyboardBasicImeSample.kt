@@ -25,11 +25,6 @@ fun KeyboardBasicImeSample(
     listItems: List<ListItem> = generateRandomListItems()
 ) {
     Scaffold(
-        modifier = Modifier
-            .fillMaxSize()
-            .windowInsetsPadding(
-                WindowInsets.navigationBars.only(WindowInsetsSides.Horizontal)
-            ),
         topBar = {
             SampleTopBar(
                 titleRes = R.string.insets_sample_keyboard_basic
@@ -40,6 +35,9 @@ fun KeyboardBasicImeSample(
         }
     ) { contentPadding ->
         LazyColumn(
+            modifier = Modifier.windowInsetsPadding(
+                WindowInsets.navigationBars.only(WindowInsetsSides.Horizontal)
+            ),
             contentPadding = contentPadding,
             reverseLayout = true
         ) {

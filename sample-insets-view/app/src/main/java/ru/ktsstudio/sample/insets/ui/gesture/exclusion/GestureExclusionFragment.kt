@@ -54,7 +54,8 @@ class GestureExclusionFragment : Fragment(R.layout.fragment_gesture_exclusion) {
     private fun setupInsets() = with(binding) {
         setupAppBarInsets(appBar.toolbar)
         bottomSheetInclude.root.applySystemBarsInsetter {
-            padding(horizontal = true, bottom = true)
+            padding(bottom = true)
+            margin(horizontal = true)
         }
 
         ViewCompat.setOnApplyWindowInsetsListener(root) { _, windowInsets ->
@@ -96,8 +97,7 @@ class GestureExclusionFragment : Fragment(R.layout.fragment_gesture_exclusion) {
 
     private fun excludeGesturesHorizontalLit(windowInsets: WindowInsetsCompat) {
         binding.root.doOnLayout {
-            val gestureInsets =
-                windowInsets.getInsets(WindowInsetsCompat.Type.systemGestures())
+            val gestureInsets = windowInsets.getInsets(WindowInsetsCompat.Type.systemGestures())
 
             with(binding) {
                 val rectTop = root.bottom - bottomSheetInclude.list.height
@@ -109,22 +109,22 @@ class GestureExclusionFragment : Fragment(R.layout.fragment_gesture_exclusion) {
                 val rightExclusionRectLeft = root.right - gestureInsets.right
                 val rightExclusionRectRight = root.right
 
-                val exclusionRects = listOf(
-                    Rect(
-                        leftExclusionRectLeft,
-                        rectTop,
-                        leftExclusionRectRight,
-                        rectBottom
-                    ),
-                    Rect(
-                        rightExclusionRectLeft,
-                        rectTop,
-                        rightExclusionRectRight,
-                        rectBottom
+                root.setSystemGestureExclusionRectsCompat(
+                    rects = listOf(
+                        Rect(
+                            leftExclusionRectLeft,
+                            rectTop,
+                            leftExclusionRectRight,
+                            rectBottom
+                        ),
+                        Rect(
+                            rightExclusionRectLeft,
+                            rectTop,
+                            rightExclusionRectRight,
+                            rectBottom
+                        )
                     )
                 )
-
-                root.setSystemGestureExclusionRectsCompat(rects = exclusionRects)
             }
         }
     }

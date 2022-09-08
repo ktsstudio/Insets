@@ -58,9 +58,6 @@ class MenuFragment : Fragment(R.layout.fragment_menu) {
             InsetsSample.Gesture.Mandatory -> MenuFragmentDirections.actionMenuFragmentToGestureMandatoryFragment()
             InsetsSample.Fullscreen.Cutout -> MenuFragmentDirections.actionMenuFragmentToFullscreenCutoutFragment()
             InsetsSample.Fullscreen.Stable -> MenuFragmentDirections.actionMenuFragmentToFullscreenStableFragment()
-            else -> error("Not implementation") // todo remove
-//            InsetsSample.Keyboard.BasicIme -> KeyboardBasicImeComposeActivity::class
-//            InsetsSample.Keyboard.ScrollIme -> KeyboardScrollImeComposeActivity::class
         }
         findNavController().navigate(action)
     }

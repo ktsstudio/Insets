@@ -2,7 +2,6 @@ package ru.ktsstudio.sample.insets.utils
 
 import android.view.View
 import androidx.appcompat.widget.Toolbar
-import com.google.android.material.appbar.AppBarLayout
 import dev.chrisbanes.insetter.InsetterApplyTypeDsl
 import dev.chrisbanes.insetter.applyInsetter
 
@@ -20,7 +19,7 @@ inline fun View.applySystemBarsInsetter(
     crossinline insetterApply: InsetterApplyTypeDsl.() -> Unit
 ) {
     applyInsetter {
-        type(navigationBars = true, statusBars = true) {
+        type(navigationBars = true, statusBars = true, displayCutout = true) {
             insetterApply()
         }
         ignoreVisibility(useStableInsets)

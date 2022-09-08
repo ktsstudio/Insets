@@ -2,19 +2,15 @@ package ru.ktsstudio.sample.insets.ui.fullscreen
 
 import android.os.Bundle
 import android.view.View
-import androidx.core.view.WindowInsetsControllerCompat
 import androidx.core.view.WindowInsetsControllerCompat.BEHAVIOR_SHOW_TRANSIENT_BARS_BY_SWIPE
-import androidx.core.view.isVisible
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import by.kirich1409.viewbindingdelegate.viewBinding
 import ru.ktsstudio.sample.insets.R
 import ru.ktsstudio.sample.insets.databinding.FragmentFullscreenStableBinding
 import ru.ktsstudio.sample.insets.utils.animateVisibility
-import ru.ktsstudio.sample.insets.utils.animateVisibilityHidden
 import ru.ktsstudio.sample.insets.utils.getDrawable
 import ru.ktsstudio.sample.insets.utils.hideSystemUi
-import ru.ktsstudio.sample.insets.utils.setDisplayCutoutModeAlways
 import ru.ktsstudio.sample.insets.utils.setupAppBarInsets
 import ru.ktsstudio.sample.insets.utils.showSystemUi
 
@@ -29,10 +25,13 @@ class FullscreenStableFragment : Fragment(R.layout.fragment_fullscreen_stable) {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        setDisplayCutoutModeAlways()
         initToolbar()
         setupInsets()
-        binding.root.setOnClickListener {
+        setupListeners()
+    }
+
+    private fun setupListeners() = with(binding) {
+        root.setOnClickListener {
             isUiVisible = !isUiVisible
         }
     }

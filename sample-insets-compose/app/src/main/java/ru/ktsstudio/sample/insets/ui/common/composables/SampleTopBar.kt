@@ -27,8 +27,7 @@ content padding matching insets.
 @Composable
 fun SampleTopBar(
     @StringRes titleRes: Int,
-    modifier: Modifier = Modifier,
-    backgroundColor: Color = MaterialTheme.colors.primary,
+    backgroundColor: Color = MaterialTheme.colors.surface,
     contentPadding: PaddingValues = WindowInsets.systemBars
         .only(WindowInsetsSides.Horizontal + WindowInsetsSides.Top)
         .asPaddingValues(),
@@ -43,7 +42,5 @@ fun SampleTopBar(
             fontSize = 18.sp,
             text = stringResource(titleRes)
         )
-
-        // content
     }
 }

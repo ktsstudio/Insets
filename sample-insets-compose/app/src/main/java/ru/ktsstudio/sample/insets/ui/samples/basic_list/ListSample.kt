@@ -9,6 +9,7 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.navigationBars
 import androidx.compose.foundation.layout.only
+import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.windowInsetsBottomHeight
 import androidx.compose.foundation.layout.windowInsetsPadding
 import androidx.compose.foundation.lazy.LazyColumn
@@ -29,9 +30,6 @@ fun ListSample(
     listItems: List<ListItem> = generateRandomListItems()
 ) {
     Scaffold(
-        modifier = Modifier.windowInsetsPadding(
-            WindowInsets.navigationBars.only(WindowInsetsSides.Horizontal)
-        ),
         topBar = {
             SampleTopBar(
                 titleRes = R.string.insets_sample_list
@@ -53,7 +51,9 @@ fun ListSample(
             // passed to us from the Scaffold
             LazyColumn(
                 contentPadding = contentPadding,
-                modifier = Modifier.fillMaxSize(),
+                modifier = Modifier.windowInsetsPadding(
+                    WindowInsets.navigationBars.only(WindowInsetsSides.Horizontal)
+                )
             ) {
                 items(items = listItems) { SampleListItem(it) }
             }

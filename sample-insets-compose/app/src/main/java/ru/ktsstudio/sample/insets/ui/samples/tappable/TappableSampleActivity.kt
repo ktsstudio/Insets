@@ -11,6 +11,7 @@ import androidx.compose.foundation.layout.navigationBars
 import androidx.compose.foundation.layout.only
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.tappableElement
+import androidx.compose.foundation.layout.union
 import androidx.compose.foundation.layout.windowInsetsPadding
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
@@ -47,9 +48,6 @@ class TappableSampleActivity : BaseComposeActivity() {
 
         InsetsExamplesTheme {
             Scaffold(
-                modifier = Modifier.windowInsetsPadding(
-                    WindowInsets.navigationBars.only(WindowInsetsSides.Horizontal)
-                ),
                 topBar = {
                     SampleTopBar(
                         titleRes = R.string.insets_sample_tappable
@@ -58,10 +56,7 @@ class TappableSampleActivity : BaseComposeActivity() {
                 floatingActionButton = {
                     FloatingActionButton(
                         modifier = Modifier.padding(
-                            bottom = WindowInsets.tappableElement
-                                .only(WindowInsetsSides.Bottom)
-                                .asPaddingValues()
-                                .calculateBottomPadding()
+                            WindowInsets.tappableElement.asPaddingValues()
                         ),
                         backgroundColor = MaterialTheme.colors.primary,
                         onClick = { list = list + randomListItem() }
@@ -74,13 +69,8 @@ class TappableSampleActivity : BaseComposeActivity() {
                 }
             ) { contentPadding ->
                 LazyColumn(
-                    contentPadding = PaddingValues(
-                        top = contentPadding.calculateTopPadding(),
-                        start = contentPadding.calculateStartPadding(LayoutDirection.Ltr),
-                        end = contentPadding.calculateEndPadding(LayoutDirection.Ltr),
-                        bottom = contentPadding.calculateBottomPadding()
-                            .plus(navigationBarsInset.calculateBottomPadding())
-                    )
+                    modifier = Modifier.padding(contentPadding),
+                    contentPadding = WindowInsets.navigationBars.asPaddingValues()
                 ) {
                     items(list) {
                         SampleListItem(it)

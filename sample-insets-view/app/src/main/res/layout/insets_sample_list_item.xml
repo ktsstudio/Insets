@@ -9,4 +9,5 @@
     android:drawablePadding="16dp"
     android:paddingHorizontal="16dp"
     android:paddingVertical="12dp"
+    tools:drawableStart="@drawable/ic_rocket"
     tools:text="Insets sample item" />

@@ -8,6 +8,7 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.mandatorySystemGestures
 import androidx.compose.foundation.layout.navigationBars
+import androidx.compose.foundation.layout.navigationBarsPadding
 import androidx.compose.foundation.layout.only
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.union
@@ -25,9 +26,6 @@ import ru.ktsstudio.sample.insets.ui.common.composables.SampleTopBar
 @Composable
 fun MandatoryGestureSample() {
     Scaffold(
-        modifier = Modifier.fillMaxSize().windowInsetsPadding(
-            WindowInsets.navigationBars.only(WindowInsetsSides.Horizontal)
-        ),
         topBar = {
             SampleTopBar(
                 titleRes = R.string.insets_sample_gesture_mandatory
@@ -46,9 +44,7 @@ fun MandatoryGestureSample() {
                     .windowInsetsPadding(
                         WindowInsets.mandatorySystemGestures
                             .only(WindowInsetsSides.Bottom)
-                            .union(
-                                WindowInsets.navigationBars.only(WindowInsetsSides.Horizontal)
-                            )
+                            .union(WindowInsets.navigationBars.only(WindowInsetsSides.Horizontal))
                     ),
                 color = Color.LightGray.copy(alpha = 0.3f)
             ) {

@@ -1,6 +1,5 @@
 package ru.ktsstudio.sample.insets.ui.menu.adapter.delegates
 
-import android.util.Log
 import com.hannesdorfmann.adapterdelegates4.dsl.adapterDelegateViewBinding
 import ru.ktsstudio.sample.insets.databinding.InsetsSampleListItemBinding
 import ru.ktsstudio.sample.insets.ui.menu.models.InsetsSample

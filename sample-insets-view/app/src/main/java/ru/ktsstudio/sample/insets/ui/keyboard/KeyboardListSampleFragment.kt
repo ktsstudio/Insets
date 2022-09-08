@@ -2,14 +2,11 @@ package ru.ktsstudio.sample.insets.ui.keyboard
 
 import android.os.Bundle
 import android.view.View
-import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
 import by.kirich1409.viewbindingdelegate.viewBinding
-import com.google.android.material.divider.MaterialDividerItemDecoration
 import ru.ktsstudio.sample.insets.R
 import ru.ktsstudio.sample.insets.common.adapter.listAdapter
 import ru.ktsstudio.sample.insets.databinding.FragmentKeyboardListSampleBinding
@@ -18,7 +15,6 @@ import ru.ktsstudio.sample.insets.utils.applySystemBarsInsetter
 import ru.ktsstudio.sample.insets.utils.generateRandomListItems
 import ru.ktsstudio.sample.insets.utils.getDrawable
 import ru.ktsstudio.sample.insets.utils.setupAppBarInsets
-import ru.ktsstudio.sample.insets.utils.toast
 
 class KeyboardListSampleFragment : Fragment(R.layout.fragment_keyboard_list_sample) {
 
@@ -45,8 +41,7 @@ class KeyboardListSampleFragment : Fragment(R.layout.fragment_keyboard_list_samp
             padding(horizontal = true)
         }
         messageWrapper.applySystemBarsImeInsetter(syncTranslationView = list) {
-            padding(horizontal = true, animated = true)
-            margin(bottom = true)
+            margin(horizontal = true, bottom = true, animated = true)
         }
     }
 
